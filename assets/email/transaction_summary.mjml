@@ -1,0 +1,40 @@
+<mjml>
+  <mj-head>
+    <mj-style>
+      p:not(:last-child) {
+      	padding-bottom: 25px;
+      }
+      ul {
+      	list-style: none;
+      }
+      ul li:before {
+      	content: '✓ ';
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#efefef">
+    <mj-section>
+      <mj-column>
+        <mj-image width="128px" src="https://cdn-icons-png.flaticon.com/512/4712/4712038.png"></mj-image>
+        <mj-spacer height="30px"></mj-spacer>
+
+        <mj-text align="center" container-background-color="#41b9c8" font-size="20px" color="#fff2f2" font-family="helvetica">Transaction Summary</mj-text>
+        <mj-text container-background-color="white" font-size="17px" color="#707070" font-family="helvetica" padding-left="0px" padding="20px">
+          <p style="padding: 0">
+          <ul>
+            {{range .Transactions}}
+            <li>{{.Pair}} - Quantity : {{.Amount}} - Price : {{.MarketPrice}}€ - Fee : {{.Fee}}€</li>
+            {{end}}
+          </ul>
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column>
+        <mj-text align="center"><a href="https://github.com/k2r79/kraken-dca-bot" title="Kraken DCA Bot" style="color:gray">❤️ Powered by Kraken DCA Bot</a></mj-text>
+        <mj-text align="center"><a href="https://www.flaticon.com/fr/icones-gratuites/bot" title="bot icônes" style="color:gray">🤖 Logo made by Smashicons on Flaticon</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

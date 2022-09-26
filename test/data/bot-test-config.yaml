@@ -1,0 +1,19 @@
+kraken:
+  key: fake_key
+  secret: fake_secret
+
+smtp:
+  host: smtp.google.com
+  port: 587
+  user: smtp_user
+  password: password
+  from: sender@gmail.com
+
+notify: recipient@gmail.com
+frequency: 1ms
+currency: ZEUR
+pairs:
+  - pair: XETHZEUR
+    amount: 20.00
+  - pair: XXBTZEUR
+    amount: 10.00
